@@ -2,8 +2,7 @@ import 'react-hot-loader/patch';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {AppContainer} from 'react-hot-loader'
-import Hello from './components/Hello/Hello';
-
+import Root from './Root';
 
 const render = Component => {
     ReactDOM.render(
@@ -14,8 +13,8 @@ const render = Component => {
     );
 }
 
-render(Hello);
+render(Root);
 
 if (module.hot) {
-    module.hot.accept('./components/Hello/Hello', () => { render(Hello) });
+    module.hot.accept('./components/Hello/Hello', () => { render(Root) });
 }
